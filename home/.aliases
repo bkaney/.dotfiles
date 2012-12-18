@@ -1,0 +1,18 @@
+# system
+alias v='vim'
+alias ll='ls -alF'
+alias c='clear; tmux clear-history 2> /dev/null; tmux clear-history 2> /dev/null'
+
+# git
+alias gru='git remote update -p'
+alias gitx-reflog='gitx --all `git reflog | cut -c1-7`'
+alias wip='git add .; git commit -m "WIP"'
+alias unwip='git reset --soft HEAD^'
+
+# ruby-related
+alias be='bundle exec'
+alias fs='bundle exec foreman start'
+
+function fr {
+  bundle exec foreman run $@
+}
