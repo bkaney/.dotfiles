@@ -1,4 +1,7 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/heroku/bin:/usr/local/bin:$PATH
+
+autoload -U compinit
+compinit
 
 eval "$(rbenv init -)"
 
