@@ -2,9 +2,16 @@
 alias v='vim'
 alias ll='ls -alF'
 alias c='clear; tmux clear-history 2> /dev/null; tmux clear-history 2> /dev/null'
+alias pu='pushd'
+alias po='popd'
+alias history='fc -l 1'
+
+# tmux
+alias tnew='tmux new-session -s'
+alias tgo='tmux attach -t'
+alias tls='tmux ls'
 
 # postgres
-
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -m fast'
 
