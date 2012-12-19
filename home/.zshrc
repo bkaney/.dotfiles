@@ -5,9 +5,6 @@ compinit
 
 eval "$(rbenv init -)"
 
-# automatically enter directories without cd
-setopt auto_cd
-
 # use vim as an editor
 export EDITOR=vim
 
@@ -17,13 +14,26 @@ if [ -e "$HOME/.aliases" ]; then
 fi
 
 # awesome cd movements from zshkit
-setopt AUTOCD
-setopt AUTOPUSHD PUSHDMINUS PUSHDSILENT PUSHDTOHOME
+setopt autocd
+setopt autopushd pushdminus pushdsilent pushdtohome
 setopt cdablevars
 
 # Try to correct command line spelling
-setopt CORRECT CORRECT_ALL
+setopt correct correct_all
 
 # Enable extended globbing
-setopt EXTENDED_GLOB
+setopt extended_glob
 
+# Hisotry-related
+export HISTSIZE=10000
+export SAVEHIST=10000
+export HISTFILE=$HOME/.zsh_history
+
+setopt append_history
+setopt inc_append_history
+setopt share_history
+setopt hist_ignore_dups
+setopt hist_reduce_blanks
+setopt hist_ignore_space
+setopt hist_verify
+setopt extended_history
