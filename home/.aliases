@@ -28,3 +28,8 @@ alias fs='bundle exec foreman start'
 function fr {
   bundle exec foreman run $@
 }
+
+# misc
+function pjson {
+  python -mjson.tool $@
+}
