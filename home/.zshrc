@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/heroku/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 autoload -U compinit
 compinit
