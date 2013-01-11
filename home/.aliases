@@ -35,3 +35,31 @@ function fr {
 function pjson {
   python -mjson.tool $@
 }
+
+# rsync.net
+if [ -e "$HOME/.rsync.net" ]; then
+  source "$HOME/.rsync.net"
+
+  rsnet-git-new() {
+    gitclonecmd=$(_creategitrepocmd $@)
+    echo $gitclonecmd | pbcopy
+    print $gitclonecmd
+    print "The clone command has been copied to your clipboard"
+  }
+
+  _creategitrepocmd() {
+    echo "git clone ssh://$RSYNC_USER@$RSYNC_HOST/$(_creategitrepo $@ | sed -e 's/\/[[:space:]]*$//' | sed -e 's/^[^\/]*\///g')"
+  }
+
+  _creategitrepo() {
+    ssh -t $RSYNC_USER@$RSYNC_HOST "git init --bare repos/$@.git"
+  }
+  
+  alias rsnet-git-ls="ssh -t $RSYNC_USER@$RSYNC_HOST ls -la repos"
+  
+  function rsnet-cmd {
+    ssh -t $RSYNC_USER@$RSYNC_HOST "$@"
+  }
+  
+  alias rsnet-ls="ssh -t $RSYNC_USER@$RSYNC_HOST ls -la"
+fi
