@@ -18,10 +18,12 @@ alias pgstop='pg_ctl -D /usr/local/var/postgres stop -m fast'
 # git
 alias gru='git remote update -p'
 alias gitx-reflog='gitx --all `git reflog | cut -c1-7`'
-alias wip='git add .; git commit -m "WIP"'
-alias unwip='git reset --soft HEAD^'
+alias gwip='git add .; git commit -m "WIP"'
+alias gunwip='git reset --soft HEAD^'
 
 # ruby-related
+alias rake='noglob rake'
+alias rspec='nocorrect rspec'
 alias be='bundle exec'
 alias fs='bundle exec foreman start'
 
