@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/bin/node_modules/.bin:$PATH
 
 autoload -U compinit
 compinit
@@ -7,6 +7,9 @@ eval "$(rbenv init -)"
 
 # use vim as an editor
 export EDITOR=vim
+
+# color support for less/more
+export LESS="--ignore-case --quiet --chop-long-lines --quit-if-one-screen --no-init --raw-control-chars"
 
 # aliases
 if [ -e "$HOME/.aliases" ]; then
@@ -24,10 +27,12 @@ setopt correct correct_all
 # Enable extended globbing
 setopt extended_glob
 
-# Hisotry-related
+# History-related
 export HISTSIZE=10000
 export SAVEHIST=10000
 export HISTFILE=$HOME/.zsh_history
+
+export IRBRC=$HOME/.irbrc
 
 setopt append_history
 setopt inc_append_history

@@ -5,6 +5,7 @@ alias c='clear; tmux clear-history 2> /dev/null; tmux clear-history 2> /dev/null
 alias pu='pushd'
 alias po='popd'
 alias history='fc -l 1'
+alias more='more -r'
 
 # tmux
 alias tnew='tmux new-session -s'
@@ -16,25 +17,32 @@ alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/serv
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -m fast'
 
 # git
-alias gru='git remote update -p'
+alias gru='git remote update -p origin'
 alias gitx-reflog='gitx --all `git reflog | cut -c1-7`'
 alias gwip='git add .; git commit -m "WIP"'
-alias gunwip='git reset --soft HEAD^'
+alias gunwip='noglob git reset HEAD^'
+
+alias git='nocorrect git'
 
 # ruby-related
 alias rake='noglob rake'
 alias rspec='nocorrect rspec'
-alias be='bundle exec'
+alias be='noglob bundle exec'
 alias fs='bundle exec foreman start'
 
 function fr {
   bundle exec foreman run $@
 }
 
+alias fr='nocorrect fr'
+
 # misc
 function pjson {
   python -mjson.tool $@
 }
+
+# heroku
+alias heroku='nocorrect heroku'
 
 # rsync.net
 if [ -e "$HOME/.rsync.net" ]; then
