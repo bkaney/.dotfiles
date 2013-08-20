@@ -27,14 +27,26 @@ alias git='nocorrect git'
 # ruby-related
 alias rake='noglob rake'
 alias rspec='nocorrect rspec'
-alias be='noglob bundle exec'
+alias be='nocorrect noglob bundle exec'
 alias fs='bundle exec foreman start'
 
 function fr {
+  echo "* looking for environment in: '.env'"
   bundle exec foreman run $@
 }
-
 alias fr='nocorrect fr'
+
+function fre {
+  echo "* looking for environment in: '$1'"
+  bundle exec foreman run -e $@
+}
+alias fre='nocorrect fre'
+
+function fse {
+  echo "* looking for environment in: '$1'"
+  fs -e $@
+}
+alias fre='nocorrect fse'
 
 # misc
 function pjson {
