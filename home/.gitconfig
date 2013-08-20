@@ -7,3 +7,26 @@
   ci = commit
   co = checkout
 	lg = log --all --branches --color --graph --pretty=format:'%C(red)%h%Creset -%C(white)%d%Creset %s %C(green)(%cr) %C(reset)<%an>%Creset' --abbrev-commit --date=relative
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[diff]
+  algorithm=patience
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color]
+  ui = auto
