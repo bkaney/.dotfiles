@@ -53,8 +53,8 @@ set term=xterm-256color
 set background=dark
 colorscheme solarized
 
-noremap <leader>sc :set spell!<CR>
-noremap <leader>hs :set hls!<CR>
+nnoremap <leader>sc :set spell!<CR>
+nnoremap <leader>hs :set hls!<CR>
 
 " statusline:
 set laststatus=2
