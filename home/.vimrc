@@ -25,6 +25,9 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
 Bundle 'groenewege/vim-less'
 Bundle 'nono/vim-handlebars'
+Bundle 'sjl/gundo.vim'
+nnoremap <F5> :GundoToggle<CR>
+
 
 " ---------------------------
 " config
