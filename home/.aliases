@@ -71,3 +71,14 @@ if [ -e "$HOME/.rsync.net" ]; then
   
   alias rsnet-ls="ssh -t $RSYNC_USER@$RSYNC_HOST ls -la"
 fi
+
+# highlighting for presentations
+function hl-rb {
+  highlight -O rtf $@ --line-numbers --font-size 24 --font Inconsolata --style solarized-dark -W -J 50 -j 3 --src-lang ruby | pbcopy
+}
+function hl-js {
+  highlight -O rtf $@ --line-numbers --font-size 24 --font Inconsolata --style solarized-dark -W -J 50 -j 3 --src-lang js | pbcopy
+}
+function hl-coffee {
+  highlight -O rtf $@ --line-numbers --font-size 24 --font Inconsolata --style solarized-dark -W -J 50 -j 3 --src-lang coffeescript | pbcopy
+}
