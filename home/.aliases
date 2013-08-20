@@ -74,13 +74,13 @@ if [ -e "$HOME/.rsync.net" ]; then
   _creategitrepo() {
     ssh -t $RSYNC_USER@$RSYNC_HOST "git init --bare repos/$@.git"
   }
-  
+
   alias rsnet-git-ls="ssh -t $RSYNC_USER@$RSYNC_HOST ls -la repos"
-  
+
   function rsnet-cmd {
     ssh -t $RSYNC_USER@$RSYNC_HOST "$@"
   }
-  
+
   alias rsnet-ls="ssh -t $RSYNC_USER@$RSYNC_HOST ls -la"
 fi
 
