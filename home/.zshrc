@@ -16,6 +16,10 @@ if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
 fi
 
+if [ -e "$HOME/.hitch" ]; then
+  source "$HOME/.hitch"
+fi
+
 # awesome cd movements from zshkit
 setopt autocd
 setopt autopushd pushdminus pushdsilent pushdtohome
