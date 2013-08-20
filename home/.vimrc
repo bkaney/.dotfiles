@@ -111,3 +111,6 @@ autocmd BufWritePre     * :call TrimWhiteSpace()
 au BufRead,BufNewFile Vagrantfile,Berksfile,Gemfile,Hanfile setfiletype ruby
 
 " ----------------------------
+" For Eduardo
+inoremap jk <Esc>
+inoremap jK <Esc>
