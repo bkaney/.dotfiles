@@ -21,24 +21,18 @@ alias gru='git remote update -p origin'
 alias gitx-reflog='gitx --all `git reflog | cut -c1-7`'
 alias gwip='git add .; git commit -m "WIP"'
 alias gunwip='noglob git reset HEAD^'
-
 alias git='nocorrect git'
 
 # ruby-related
 alias rake='noglob rake'
 alias rspec='nocorrect rspec'
 alias be='nocorrect noglob bundle exec'
-alias fs='bundle exec foreman start'
-
-function fr {
-  echo "* looking for environment in: '.env'"
-  bundle exec foreman run $@
-}
-alias fr='nocorrect fr'
+alias fs='nocorrect bundle exec foreman start'
+alias fr='nocorrect bundle exec foreman run'
 
 function fre {
   echo "* looking for environment in: '$1'"
-  bundle exec foreman run -e $@
+  fr -e $@
 }
 alias fre='nocorrect fre'
 
@@ -46,7 +40,7 @@ function fse {
   echo "* looking for environment in: '$1'"
   fs -e $@
 }
-alias fre='nocorrect fse'
+alias fse='nocorrect fse'
 
 # misc
 function pjson {
