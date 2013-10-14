@@ -23,6 +23,9 @@ Bundle 'mileszs/ack.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
+Bundle 'elzr/vim-json'
+let g:vim_json_syntax_conceal = 0
+
 Bundle 'groenewege/vim-less'
 Bundle 'nono/vim-handlebars'
 Bundle 'sjl/gundo.vim'
