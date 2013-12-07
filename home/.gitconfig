@@ -2,19 +2,26 @@
   name = Brian Kaney
   email = brian@vermonster.com
 [alias]
-  st = status
+  st = status -sb
   br = branch
   ci = commit
   co = checkout
-	lg = log --all --branches --color --graph --pretty=format:'%C(red)%h%Creset -%C(white)%d%Creset %s %C(green)(%cr) %C(reset)<%an>%Creset' --abbrev-commit --date=relative
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  lg = log --all --branches --color --graph --pretty=format:'%C(red)%h%Creset -%C(white)%d%Creset %s %C(green)(%cr) %C(reset)<%an>%Creset' --abbrev-commit --date=relative
 [diff]
   algorithm=patience
+[core]
+  # Treat spaces before tabs, lines that are indented with 8 or more spaces, and
+  # all kinds of trailing whitespace as an error.
+  # [default] trailing-space: looks for spaces at the end of a line
+  # [default] space-before-tab: looks for spaces before tabs at the beginning of
+  # a line
+  whitespace = space-before-tab,indent-with-non-tab,trailing-space
+
+  # Make `git rebase` safer on OS X
+  # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+  trustctime = false
+
+  editor = vim
 [color "diff"]
   meta = yellow bold
   frag = magenta bold
