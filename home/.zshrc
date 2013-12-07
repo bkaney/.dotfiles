@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:/usr/local/bin:$HOME/bin/node_modules/.bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/share/npm/bin:$PATH
 
 autoload -U compinit
 compinit
