@@ -42,6 +42,10 @@ function fse {
 }
 alias fse='nocorrect fse'
 
+# gopow
+alias gpr='gopow bundle exec foreman run'
+alias gps='gopow bundle exec foreman start'
+
 # misc
 function pjson {
   python -mjson.tool $@
