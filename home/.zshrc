@@ -35,16 +35,15 @@ setopt extended_glob
 export HISTSIZE=10000
 export SAVEHIST=10000
 export HISTFILE=$HOME/.zsh_history
-
 export IRBRC=$HOME/.irbrc
 
-setopt append_history
-setopt inc_append_history
-setopt share_history
-setopt hist_ignore_dups
-setopt hist_reduce_blanks
-setopt hist_ignore_space
-setopt hist_verify
-setopt extended_history
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_IGNORE_SPACE
+setopt HIST_VERIFY
+setopt EXTENDED_HISTORY
 
 set -o vi
