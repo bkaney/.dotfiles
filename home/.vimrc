@@ -110,6 +110,10 @@ autocmd FileAppendPre   * :call TrimWhiteSpace()
 autocmd FilterWritePre  * :call TrimWhiteSpace()
 autocmd BufWritePre     * :call TrimWhiteSpace()
 
+" ----------------------------
+" Tab completion
+set wildmode=list:longest,list:full
+set complete=.,w,t
 
 " ----------------------------
 " File types
