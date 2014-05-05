@@ -6,6 +6,7 @@
   br = branch
   ci = commit
   co = checkout
+  up = fetch --all
   lg = log --all --branches --color --graph --pretty=format:'%C(red)%h%Creset -%C(white)%d%Creset %s %C(green)(%cr) %C(reset)<%an>%Creset' --abbrev-commit --date=relative
 [diff]
   algorithm=patience
