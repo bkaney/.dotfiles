@@ -16,6 +16,10 @@ alias tls='tmux ls'
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -m fast'
 
+# memcached
+alias mcachedstart='/usr/local/opt/memcached/bin/memcached -d'
+alias mcachedstop='/usr/bin/pkill memcached'
+
 # git
 alias g='git'
 alias gru='git remote update -p origin'
