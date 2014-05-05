@@ -32,10 +32,13 @@ Bundle 'sjl/gundo.vim'
 Bundle 'vim-ruby/vim-ruby'
 nnoremap <F5> :GundoToggle<CR>
 
+Bundle 'duskhacker/sweet-rspec-vim'
+
+map <leader>R :SweetVimRspecRunFile<CR>
+map <leader>r :SweetVimRspecRunFocused<CR>
 
 " ---------------------------
 " config
-
 syntax on
 filetype plugin indent on
 let mapleader = ","
