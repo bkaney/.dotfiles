@@ -17,6 +17,7 @@ alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/serv
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -m fast'
 
 # git
+alias g='git'
 alias gru='git remote update -p origin'
 alias gitx-reflog='gitx --all `git reflog | cut -c1-7`'
 alias gwip='git add .; git commit -m "WIP"'
