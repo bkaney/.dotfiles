@@ -74,13 +74,10 @@ if [ -e "$HOME/.rsync.net" ]; then
     ssh -t $RSYNC_USER@$RSYNC_HOST "git init --bare repos/$@.git"
   }
 
-  alias rsnet-git-ls="ssh -t $RSYNC_USER@$RSYNC_HOST ls -la repos"
 
-  function rsnet-cmd {
+  function rsnet {
     ssh -t $RSYNC_USER@$RSYNC_HOST "$@"
   }
-
-  alias rsnet-ls="ssh -t $RSYNC_USER@$RSYNC_HOST ls -la"
 fi
 
 # highlighting for presentations
