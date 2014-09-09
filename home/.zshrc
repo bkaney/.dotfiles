@@ -1,5 +1,11 @@
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/share/npm/bin:$PATH
 
+# Assure that the .rbenv -related have higher precedence (i.e. when using tmux)
+# then de-dup PATH variable.
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
+typeset -U PATH
+
 autoload -U compinit
 compinit
 
