@@ -32,9 +32,16 @@ Bundle 'vim-ruby/vim-ruby'
 nnoremap <F5> :GundoToggle<CR>
 
 Bundle 'duskhacker/sweet-rspec-vim'
-
 map <leader>R :SweetVimRspecRunFile<CR>
 map <leader>r :SweetVimRspecRunFocused<CR>
+
+Bundle 'sukima/xmledit'
+map <Leader>x :set filetype=xml<CR>
+  \:source $VIMRUNTIME/syntax/xml.vim<CR>
+  \:set foldmethod=syntax<CR>
+  \:source $VIMRUNTIME/syntax/syntax.vim<CR>
+
+Bundle 'heartsentwined/vim-emblem'
 
 " ---------------------------
 " config
