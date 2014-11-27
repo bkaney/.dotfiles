@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo "Removing ~/.bin, I use ~/bin"
+rm -rf "$HOME/.bin"
+sed '/export PATH="\$HOME\/\.bin:\$PATH"/d' "$HOME/.zshrc" > /dev/null
+
+echo "Removing suspenders"
+gem uninstall -aIx suspenders
