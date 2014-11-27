@@ -1,8 +1,8 @@
 #!/bin/sh
 
-echo "Removing ~/.bin, I use ~/bin"
+echo "Removing ~/.bin, already using ~/bin for local programs..."
 rm -rf "$HOME/.bin"
-sed '/export PATH="\$HOME\/\.bin:\$PATH"/d' "$HOME/.zshrc" > /dev/null
+sed -i bak -e '/export PATH="\$HOME\/.bin:\$PATH"/d' "$HOME/.zshrc"
 
-echo "Removing suspenders"
+echo "Removing suspenders gem..."
 gem uninstall -aIx suspenders
