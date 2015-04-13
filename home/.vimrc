@@ -43,6 +43,8 @@ map <Leader>x :set filetype=xml<CR>
 
 Bundle 'heartsentwined/vim-emblem'
 
+Bundle 'kien/ctrlp.vim.git'
+
 " ---------------------------
 " config
 syntax on
