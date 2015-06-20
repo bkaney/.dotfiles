@@ -53,3 +53,7 @@ setopt HIST_VERIFY
 setopt EXTENDED_HISTORY
 
 set -o vi
+
+if [ -e "$HOME/.promptrc" ]; then
+  source "$HOME/.promptrc"
+fi
