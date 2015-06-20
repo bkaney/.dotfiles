@@ -42,7 +42,6 @@ map <Leader>x :set filetype=xml<CR>
   \:source $VIMRUNTIME/syntax/syntax.vim<CR>
 
 Bundle 'heartsentwined/vim-emblem'
-
 Bundle 'kien/ctrlp.vim.git'
 
 " ---------------------------
@@ -142,8 +141,4 @@ set complete=.,w,t
 " File types
 
 au BufRead,BufNewFile Vagrantfile,Berksfile,Gemfile,Hanfile setfiletype ruby
-
-" ----------------------------
-" For Eduardo
-inoremap jk <Esc>
-inoremap jK <Esc>
+au BufRead,BufNewFile *.es6 setfiletype javascript
