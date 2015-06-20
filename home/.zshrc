@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/share/npm/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/bin:$PATH
 
 # Assure that the .rbenv -related have higher precedence (i.e. when using tmux)
 # then de-dup PATH variable.
@@ -57,3 +57,6 @@ set -o vi
 if [ -e "$HOME/.promptrc" ]; then
   source "$HOME/.promptrc"
 fi
+
+export PATH="$PATH:/usr/local/lib/node_modules"
+source $(brew --prefix nvm)/nvm.sh
