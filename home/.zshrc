@@ -26,6 +26,10 @@ if [ -e "$HOME/.hitch" ]; then
   source "$HOME/.hitch"
 fi
 
+if [ -e "$HOME/.dockerrc" ]; then
+  source "$HOME/.dockerrc"
+fi
+
 # awesome cd movements from zshkit
 setopt autocd
 setopt autopushd pushdminus pushdsilent pushdtohome
