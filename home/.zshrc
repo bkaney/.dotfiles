@@ -67,3 +67,6 @@ fi
 if [ -e "$HOME/.promptrc" ]; then
   source "$HOME/.promptrc"
 fi
+
+# Docker init
+$(boot2docker shellinit 2>/dev/null)
