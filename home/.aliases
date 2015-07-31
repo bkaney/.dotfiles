@@ -48,6 +48,10 @@ function fse {
 }
 alias fse='nocorrect fse'
 
+
+# ember
+alias ember='nocorrect ember'
+
 # gopow
 alias gpr='gopow bundle exec foreman run'
 alias gps='gopow bundle exec foreman start'
