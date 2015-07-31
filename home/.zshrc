@@ -13,7 +13,7 @@ compinit
 eval "$(rbenv init -)"
 
 # nvm start
-export PATH="$PATH:/usr/local/lib/node_modules"
+export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 # use vim as an editor
