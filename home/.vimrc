@@ -88,6 +88,9 @@ nnoremap <leader>hs :set hls!<CR>
 " statusline:
 set laststatus=2
 
+" diable bell in vim
+:set vb t_vb=
+
 " cf the default statusline: %<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 " format markers:
 "   %< truncation point
