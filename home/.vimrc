@@ -3,11 +3,11 @@ filetype off                   " required!
 
 " ---------------------------
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Bundle 'gmarik/Vundle.vim'
 
 " plugins
 Bundle 'tpope/vim-fugitive'
@@ -23,26 +23,17 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
 Bundle 'elzr/vim-json'
-let g:vim_json_syntax_conceal = 0
-
 Bundle 'groenewege/vim-less'
 Bundle 'nono/vim-handlebars'
 Bundle 'sjl/gundo.vim'
 Bundle 'vim-ruby/vim-ruby'
-nnoremap <F5> :GundoToggle<CR>
-
 Bundle 'duskhacker/sweet-rspec-vim'
-map <leader>R :SweetVimRspecRunFile<CR>
-map <leader>r :SweetVimRspecRunFocused<CR>
-
 Bundle 'sukima/xmledit'
-map <Leader>x :set filetype=xml<CR>
-  \:source $VIMRUNTIME/syntax/xml.vim<CR>
-  \:set foldmethod=syntax<CR>
-  \:source $VIMRUNTIME/syntax/syntax.vim<CR>
-
 Bundle 'heartsentwined/vim-emblem'
 Bundle 'kien/ctrlp.vim.git'
+
+call vundle#end()
+
 
 " ---------------------------
 " config
@@ -53,6 +44,16 @@ set wrap
 set number
 set history=1000
 set backspace=indent,eol,start
+
+let g:vim_json_syntax_conceal = 0
+nnoremap <F5> :GundoToggle<CR>
+map <leader>R :SweetVimRspecRunFile<CR>
+map <leader>r :SweetVimRspecRunFocused<CR>
+
+map <Leader>x :set filetype=xml<CR>
+  \:source $VIMRUNTIME/syntax/xml.vim<CR>
+  \:set foldmethod=syntax<CR>
+  \:source $VIMRUNTIME/syntax/syntax.vim<CR>
 
 autocmd FileChangedShell * echo "File changed, press F9 to reload."
 
