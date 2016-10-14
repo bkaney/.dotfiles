@@ -33,6 +33,7 @@ alias git='nocorrect git'
 alias rake='noglob rake'
 alias rspec='nocorrect rspec'
 alias be='nocorrect noglob bundle exec'
+alias br='noglob bundle exec bin/rails'
 alias fs='nocorrect bundle exec foreman start'
 alias fr='nocorrect bundle exec foreman run'
 
