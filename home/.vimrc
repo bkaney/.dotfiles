@@ -7,33 +7,46 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle
-Bundle 'gmarik/Vundle.vim'
+Plugin 'gmarik/Vundle.vim'
 
-" plugins
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-cucumber'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-haml'
-Bundle 'mileszs/ack.vim'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'pangloss/vim-javascript'
-Bundle 'elzr/vim-json'
-Bundle 'groenewege/vim-less'
-Bundle 'nono/vim-handlebars'
-Bundle 'sjl/gundo.vim'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'duskhacker/sweet-rspec-vim'
-Bundle 'sukima/xmledit'
-Bundle 'heartsentwined/vim-emblem'
-Bundle 'kien/ctrlp.vim.git'
-
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-cucumber'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-haml'
+Plugin 'mileszs/ack.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'pangloss/vim-javascript'
+Plugin 'elzr/vim-json'
+Plugin 'groenewege/vim-less'
+Plugin 'nono/vim-handlebars'
+Plugin 'sjl/gundo.vim'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'duskhacker/sweet-rspec-vim'
+Plugin 'sukima/xmledit'
+Plugin 'heartsentwined/vim-emblem'
+Plugin 'kien/ctrlp.vim.git'
+Plugin 'bkaney/vim-postcss-sorting'
 call vundle#end()
 
+" ---------------------------
+" plugin config
+let g:vim_json_syntax_conceal = 0
+nnoremap <F5> :GundoToggle<CR>
+nnoremap <Leader>ps :CSSSorting<CR>
+
+map <leader>R :SweetVimRspecRunFile<CR>
+map <leader>r :SweetVimRspecRunFocused<CR>
+
+map <Leader>x :set filetype=xml<CR>
+  \:source $VIMRUNTIME/syntax/xml.vim<CR>
+  \:set foldmethod=syntax<CR>
+  \:source $VIMRUNTIME/syntax/syntax.vim<CR>
 
 " ---------------------------
 " config
@@ -76,6 +89,10 @@ set expandtab
 set smarttab
 set shiftwidth=2
 set tabstop=2
+
+" no error bells
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 
 " themes / colors
 set term=xterm-256color
