@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.bin:/usr/local/bin:/usr/local/bin:$PATH
 
 # Assure that the .rbenv -related have higher precedence (i.e. when using tmux)
 # then de-dup PATH variable.
@@ -11,10 +11,6 @@ compinit
 
 # rbenv start
 eval "$(rbenv init -)"
-
-# nvm start
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # use vim as an editor
 export EDITOR=vim
@@ -68,5 +64,5 @@ if [ -e "$HOME/.promptrc" ]; then
   source "$HOME/.promptrc"
 fi
 
-# Docker init
-$(boot2docker shellinit 2>/dev/null)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
