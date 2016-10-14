@@ -16,7 +16,7 @@ git_prompt_info_incl_dirty() {
     then
       echo "$(git_prompt_info)"
     else
-      echo "%{$fg_bold[red]%}*%{$reset_color%} $(git_prompt_info)%{$reset_color%}"
+      echo "%{$fg_bold[red]%}*%{$reset_color%}$(git_prompt_info)%{$reset_color%}"
     fi
   fi
 }
