@@ -32,6 +32,7 @@ Plugin 'sukima/xmledit'
 Plugin 'heartsentwined/vim-emblem'
 Plugin 'kien/ctrlp.vim.git'
 Plugin 'bkaney/vim-postcss-sorting'
+Plugin 'elixir-lang/vim-elixir'
 call vundle#end()
 
 " ---------------------------
