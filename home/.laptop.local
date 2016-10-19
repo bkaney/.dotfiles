@@ -1,5 +1,2 @@
 #!/bin/sh
 
-echo "Removing ~/.bin, already using ~/bin for local programs..."
-rm -rf "$HOME/.bin"
-sed -i bak -e '/export PATH="\$HOME\/.bin:\$PATH"/d' "$HOME/.zshrc"
