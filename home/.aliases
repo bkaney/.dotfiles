@@ -1,5 +1,5 @@
 # system
-alias v='vim'
+alias v='nvim'
 alias ll='ls -alF'
 alias c='clear; tmux clear-history 2> /dev/null; tmux clear-history 2> /dev/null'
 alias pu='pushd'
