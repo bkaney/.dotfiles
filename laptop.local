@@ -1,5 +1,7 @@
 #!/bin/sh
 
+
+
 brew bundle --file=- <<EOF
 brew "ack"
 brew "neovim"
@@ -12,7 +14,14 @@ brew "nvm"
 brew "python"
 EOF
 
+# Need this to build rmagick...see:
+# https://stackoverflow.com/questions/41647979/imagemagick-7-with-rmagick-2-16-on-macos-sierra-cant-find-magickwand-h
+brew uninstall imagemagick
+brew install imagemagick@6
+brew link --force imagemagick@6
+
 brew cask install "iterm2"
+brew cask install "java"
 brew cask install "google-chrome"
 brew cask install "fork"
 brew cask install "slack"
