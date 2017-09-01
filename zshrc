@@ -1,5 +1,3 @@
-export PATH=$HOME/.bin:/usr/local/bin:/usr/local/bin:$PATH
-
 # prefer findutils
 export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
@@ -20,9 +18,6 @@ typeset -U PATH
 
 autoload -U compinit
 compinit
-
-# rbenv start
-eval "$(rbenv init -)"
 
 # use vim as an editor
 export EDITOR=vim
@@ -81,3 +76,6 @@ fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PATH="$HOME/.bin:$PATH"
+eval "$(rbenv init - --no-rehash)"
