@@ -12,6 +12,12 @@ brew "nvm"
 brew "python"
 EOF
 
+brew cask install "iterm2"
+brew cask install "google-chrome"
+brew cask install "fork"
+brew cask install "slack"
+brew cask install "authy-desktop"
+
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
 brew cask cleanup
