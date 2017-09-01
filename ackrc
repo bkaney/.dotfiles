@@ -1,0 +1,17 @@
+--type-set=coffee=.coffee
+--type-set=haml=.haml
+--type-set=json=.json
+--type-add=js=.js.erb
+--type-add=css=.css,.sass,.scss
+--type-set=cucumber=.feature
+--type-set=ejs=.ejs
+
+--ignore-dir=log
+--ignore-dir=tags
+--ignore-dir=tmp
+
+--sort-files
+--color
+--follow
+--group
+--context=1

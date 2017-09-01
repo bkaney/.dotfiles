@@ -1,0 +1,15 @@
+#!/bin/sh
+
+brew "ack"
+brew "neovim"
+
+brew "coreutils"
+brew "searchutils"
+brew "gnu-sed"
+brew "tree"
+brew "nvm"
+brew "python"
+
+fancy_echo "Cleaning up old Homebrew formulae ..."
+brew cleanup
+brew cask cleanup
