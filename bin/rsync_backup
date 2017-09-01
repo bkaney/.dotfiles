@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ -e "$HOME/.rsync.net" ]; then
+  source "$HOME/.rsync.net"
+
+  echo BEGIN `date` >> $HOME/backup.log
+  SSH_AUTH_SOCK=$(lsof -a -p $(pgrep ssh-agent) -U -F n | sed -n 's/^n//p') /usr/bin/caffeinate -s /usr/bin/rsync -avHS $HOME/Personal $RSYNC_USER@$RSYNC_HOST:$USER >> $HOME/backup.log
+  echo END `date` >> $HOME/backup.log
+else
+  echo NO CONFIG >> $HOME/backup.log
+fi
