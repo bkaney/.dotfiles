@@ -79,3 +79,4 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.bin:$PATH"
 eval "$(rbenv init - --no-rehash)"
+source /usr/local/opt/nvm/nvm.sh
