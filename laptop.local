@@ -1,14 +1,16 @@
 #!/bin/sh
 
+brew bundle --file=- <<EOF
 brew "ack"
 brew "neovim"
 
 brew "coreutils"
-brew "searchutils"
+brew "findutils"
 brew "gnu-sed"
 brew "tree"
 brew "nvm"
 brew "python"
+EOF
 
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
