@@ -11,7 +11,7 @@ brew "findutils"
 brew "gnu-sed"
 brew "tree"
 brew "nvm"
-brew "python"
+brew "python3"
 EOF
 
 # Need this to build rmagick...see:
@@ -26,7 +26,12 @@ brew cask install "google-chrome"
 brew cask install "fork"
 brew cask install "slack"
 brew cask install "authy-desktop"
+brew cask install "spotify"
 
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
 brew cask cleanup
+
+curl -O https://bootstrap.pypa.io/get-pip.py
+python3 get-pip.py --user
+pip3 install awscli --upgrade --user

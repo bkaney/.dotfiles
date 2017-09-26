@@ -80,3 +80,6 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.bin:$PATH"
 eval "$(rbenv init - --no-rehash)"
 source /usr/local/opt/nvm/nvm.sh
+
+# pip3 items
+export PATH="$HOME/Library/Python/3.6/bin:$PATH"
