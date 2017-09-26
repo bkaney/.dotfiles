@@ -29,6 +29,9 @@ Plug 'floobits/floobits-neovim'
 
 call plug#end()
 
+" change the mapleader from \ to ,
+let mapleader=","
+
 " Basic tab behavior
 set autoindent
 set expandtab
