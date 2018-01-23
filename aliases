@@ -28,6 +28,7 @@ alias gitx-reflog='gitx --all `git reflog | cut -c1-7`'
 alias gwip='git add .; git commit -m "WIP"'
 alias gunwip='noglob git reset HEAD^'
 alias git='nocorrect git'
+alias stree='/Applications/Sourcetree.app/Contents/Resources/stree'
 
 # ruby-related
 alias rake='noglob rake'
