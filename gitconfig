@@ -1,6 +1,6 @@
 [user]
-	name = Brian Kaney
-	email = brian@vermonster.com
+  name = Brian Kaney
+  email = brian@vermonster.com
 [alias]
   st = status -sb
   br = branch
