@@ -26,6 +26,7 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'dsawardekar/ember.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'floobits/floobits-neovim'
+Plug 'neo4j-contrib/cypher-vim-syntax'
 
 call plug#end()
 
@@ -112,5 +113,7 @@ au BufRead,BufNewFile Vagrantfile,Berksfile,Gemfile setfiletype ruby
 au BufRead,BufNewFile *.es6 setfiletype javascript
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+autocmd FileType crontab setlocal bck=yes
 
 imap jj <esc>
