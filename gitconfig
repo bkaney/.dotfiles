@@ -8,7 +8,8 @@
   co = checkout
   cp = cherry-pick
   up = fetch --all
-  lg = log --all --branches --color --graph --pretty=format:'%C(red)%h%Creset -%C(white)%d%Creset %s %C(green)(%cr) %C(reset)<%an>%Creset' --abbrev-commit --date=relative
+  lgg = log --all --branches --color --graph --pretty=format:'%C(red)%h%Creset -%C(white)%d%Creset %s %C(green)(%cr) %C(reset)<%an>%Creset' --abbrev-commit --date=relative
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [diff]
   algorithm=patience
 [core]
@@ -24,6 +25,9 @@
   trustctime = false
 
   editor = vim
+  excludesfile = /Users/bkaney/.gitignore_global
+
+  pager = less -FeRX
 [color "diff"]
   meta = yellow bold
   frag = magenta bold
