@@ -57,6 +57,9 @@ export IRBRC=$HOME/.irbrc
 # control-r search
 bindkey "^R" history-incremental-search-backward
 
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
+
 # additional configuration
 if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
