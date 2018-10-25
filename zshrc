@@ -86,3 +86,12 @@ source /usr/local/opt/nvm/nvm.sh
 
 # pip3 items
 export PATH="$HOME/Library/Python/3.6/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# SAM support
+USER_BASE_PATH=$(python -m site --user-base)
+export PATH=$PATH:$USER_BASE_PATH/bin
+
