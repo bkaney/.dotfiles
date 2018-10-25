@@ -27,6 +27,8 @@ Plug 'dsawardekar/ember.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'floobits/floobits-neovim'
 Plug 'neo4j-contrib/cypher-vim-syntax'
+Plug 'vim-airline/vim-airline'
+Plug 'hashivim/vim-terraform'
 
 call plug#end()
 
