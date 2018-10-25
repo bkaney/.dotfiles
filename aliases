@@ -7,6 +7,7 @@ alias po='popd'
 alias history='fc -l 1'
 alias more='more -r'
 alias curl='noglob curl --globoff'
+alias stty='/bin/stty'
 
 # tmux
 alias tnew='tmux new-session -s'
