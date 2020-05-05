@@ -10,6 +10,9 @@ MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 
+# Python3
+PATH="$HOME/Library/Python/3.7/bin:$PATH"
+
 # Assure that the .rbenv -related have higher precedence (i.e. when using tmux)
 # then de-dup PATH variable.
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -57,8 +60,8 @@ export IRBRC=$HOME/.irbrc
 # control-r search
 bindkey "^R" history-incremental-search-backward
 
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
+bindkey "^P" history-beginning-search-backward
+bindkey "^N" history-beginning-search-forward
 
 # additional configuration
 if [ -e "$HOME/.aliases" ]; then
@@ -81,17 +84,20 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 export PATH="$HOME/.bin:$PATH"
-eval "$(rbenv init - --no-rehash)"
-source /usr/local/opt/nvm/nvm.sh
+export PATH="$HOME/.local/bin:$PATH"
 
 # pip3 items
 export PATH="$HOME/Library/Python/3.6/bin:$PATH"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # SAM support
 USER_BASE_PATH=$(python -m site --user-base)
 export PATH=$PATH:$USER_BASE_PATH/bin
 
+# Dotnet support
+export PATH=$PATH:$HOME/.dotnet/tools
+
+source $HOME/.asdf/asdf.sh
+
+# Java support
+source $HOME/.asdf/plugins/java/set-java-home.sh
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
