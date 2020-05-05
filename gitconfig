@@ -1,6 +1,7 @@
 [user]
   name = Brian Kaney
   email = brian@vermonster.com
+  signingkey = EE39E11029A8FAEC
 [alias]
   st = status -sb
   br = branch
@@ -8,8 +9,10 @@
   co = checkout
   cp = cherry-pick
   up = fetch --all
-  lgg = log --all --branches --color --graph --pretty=format:'%C(red)%h%Creset -%C(white)%d%Creset %s %C(green)(%cr) %C(reset)<%an>%Creset' --abbrev-commit --date=relative
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lgg = log --all --branches --color --graph --abbrev-commit --date=relative \
+    --pretty=format:'%C(red)%h%Creset -%C(white)%d%Creset %s %C(green)(%cr) %C(bold blue)<%an>%Creset %G?'
+  lg = log --graph --abbrev-commit \
+    --pretty=format:'%C(red)%h%Creset -%C(white)%d%Creset %s %C(green)(%cr) %C(bold blue)<%an>%Creset %G?'
 [diff]
   algorithm=patience
 [core]
@@ -48,3 +51,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[commit]
+  gpgsign = true
