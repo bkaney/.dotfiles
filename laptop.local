@@ -1,27 +1,13 @@
 #!/bin/sh
 
-
-
 brew bundle --file=- <<EOF
 brew "neovim"
-
 brew "coreutils"
 brew "findutils"
-brew "gnu-sed"
 brew "tree"
-brew "nvm"
-brew "python3"
 EOF
 
-# Need this to build rmagick...see:
-# https://stackoverflow.com/questions/41647979/imagemagick-7-with-rmagick-2-16-on-macos-sierra-cant-find-magickwand-h
-brew uninstall imagemagick
-brew install imagemagick@6
-brew link --force imagemagick@6
 
-brew cask install "iterm2"
-brew cask install "java"
-brew cask install "google-chrome"
 brew cask install "fork"
 brew cask install "slack"
 # brew cask install "authy-desktop"
@@ -29,7 +15,3 @@ brew cask install "spotify"
 
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup
-
-curl -O https://bootstrap.pypa.io/get-pip.py
-python3 get-pip.py --user
-pip3 install awscli --upgrade --user

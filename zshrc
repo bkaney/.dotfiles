@@ -10,9 +10,6 @@ MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 
-# Python3
-PATH="$HOME/Library/Python/3.7/bin:$PATH"
-
 # Assure that the .rbenv -related have higher precedence (i.e. when using tmux)
 # then de-dup PATH variable.
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -80,24 +77,20 @@ if [ -e "$HOME/.promptrc" ]; then
   source "$HOME/.promptrc"
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-
 export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-
-# pip3 items
-export PATH="$HOME/Library/Python/3.6/bin:$PATH"
-
-# SAM support
-USER_BASE_PATH=$(python -m site --user-base)
-export PATH=$PATH:$USER_BASE_PATH/bin
-
-# Dotnet support
-export PATH=$PATH:$HOME/.dotnet/tools
+export PATH="$PATH:$HOME/.dotnet/tools"
 
 source $HOME/.asdf/asdf.sh
 
 # Java support
-source $HOME/.asdf/plugins/java/set-java-home.sh
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+source $HOME/.asdf/plugins/java/set-java-home.zsh
+
+# Dotnet support
+source $HOME/.asdf/plugins/dotnet-core/set-dotnet-home.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/bkaney/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bkaney/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/bkaney/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bkaney/google-cloud-sdk/completion.zsh.inc'; fi
